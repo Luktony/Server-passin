@@ -1,0 +1,31 @@
+POST http://localhost:3000/events
+Content-Type: application/json
+
+{
+    "title":"Novo Evento2",
+    "details":"Um evento...",
+    "maximumAttendees": 1
+}
+###
+
+POST http://localhost:3000/events/918e2d04-a6b5-4314-9352-360a10f5bd3c/attendees
+Content-Type: application/json
+
+{
+"name": "Lucas da Costa",
+"email": "luktony@gmail.com"
+}
+
+###
+
+GET http://localhost:3000/events/918e2d04-a6b5-4314-9352-360a10f5bd3c
+
+###
+
+GET http://localhost:3000/attendees/1/badge
+###
+
+GET http://localhost:3000/attendees/4/check-in
+###
+
+GET http://localhost:3000/events/918e2d04-a6b5-4314-9352-360a10f5bd3c/attendees?query=lucas
